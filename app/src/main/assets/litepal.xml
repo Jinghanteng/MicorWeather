@@ -1,0 +1,11 @@
+<litepal>
+    <dbname value="xiaoweather"></dbname>
+    <version value="1"></version>
+    <list>
+    <mapping class="com.example.t.xiaoweather.db.Province"></mapping>
+        <mapping class="com.example.t.xiaoweather.db.City"></mapping>
+        <mapping class="com.example.t.xiaoweather.db.County"></mapping>
+
+    </list>
+
+</litepal>
