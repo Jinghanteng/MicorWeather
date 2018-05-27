@@ -1,11 +1,13 @@
 package com.example.t.xiaoweather.util;
 
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.example.t.xiaoweather.db.City;
 import com.example.t.xiaoweather.db.County;
 import com.example.t.xiaoweather.db.Province;
-import com.google.gson.JsonObject;
+import com.example.t.xiaoweather.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -68,5 +70,17 @@ public class Utility {
             }
         }
         return false;
+    }
+    @Nullable
+    public static Weather handleWeatherResponde(String response){
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray =jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,Weather.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 }
