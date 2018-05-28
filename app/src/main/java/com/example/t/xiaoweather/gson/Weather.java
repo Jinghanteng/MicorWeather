@@ -10,6 +10,6 @@ public class Weather {
     public AQI aqi;
     public Now now;
     public Suggestion suggestion;
-    @SerializedName("daily_forecastList")
+    @SerializedName("daily_forecast")
     public List<Forecast> forecastList;
 }

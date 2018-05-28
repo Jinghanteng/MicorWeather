@@ -71,6 +71,7 @@ public class ChooseAreaFragment extends Fragment {
                     queryCities();
                 }else if (currentLevel == LEVEL_CITY){
                     selectedCity = cityList.get(position);
+                    queryCounties();
                 }
                 else if (currentLevel==LEVEL_COUNTY){
                     String weatherId = countyList.get(position).getWeatherId();

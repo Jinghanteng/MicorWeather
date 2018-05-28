@@ -3,11 +3,11 @@ package com.example.t.xiaoweather.gson;
 import com.google.gson.annotations.SerializedName;
 
 public class Basic {
-    @SerializedName("ciyt")
-    public  String cityName;
+    @SerializedName("city")
+    public String cityName;
 
     @SerializedName("id")
-    public  String weatherid;
+    public  String weatherId;
 
     public Update update;
 
